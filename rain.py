@@ -847,7 +847,7 @@ def building_searching():
         else:
             texts = """<h2 style = "color: rgb(0,0, 255); font-weight: bold; font-size: 25px; text-align: left;">적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
-        st.dataframe(building))
+        st.dataframe(building)
     elif ((title == '국립중앙박물관') | ('용산구 서빙고로 137' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '국립중앙박물관')]
