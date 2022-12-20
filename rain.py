@@ -289,9 +289,9 @@ def region_searching():
         elif loca_2 == '마포':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
-            seoul_kc = seoul_all.loc[(seoul_all['지역']=='마포구')]
+            seoul_mp = seoul_all.loc[(seoul_all['지역']=='마포구')]
             st.header('검색 결과')
-            df_kc = seoul.loc[(seoul['지역']=='마포구')]
+            df_mp = seoul.loc[(seoul['지역']=='마포구')]
             if (df_mp.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
                 st.dataframe(seoul_mp)
