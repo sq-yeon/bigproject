@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
 import streamlit as st
-import folium
 
 seoul = pd.read_csv('빅프로젝트/seoul_predict_2.csv')
 
