@@ -344,7 +344,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='코엑스')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -357,7 +359,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='현대백화점 무역센터점')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -370,7 +374,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='미아동복합청사')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -383,7 +389,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='장원빌딩')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -396,7 +404,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='엘디타운')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -409,7 +419,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='서울대역 해담채')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -422,7 +434,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='건국대학교 부동산학관')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -435,7 +449,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='건국대학교 신공학관')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -448,7 +464,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='구로아트밸리')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -461,7 +479,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='벽산디지털밸리7차')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -474,7 +494,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='사라유치원')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -487,7 +509,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='성실유치원')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -500,7 +524,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='서울신화초등학교')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -513,7 +539,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='도봉기적의도서관')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -526,7 +554,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='청계한신휴플러스')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -539,7 +569,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='대성스카이렉스 Ⅱ')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -552,7 +584,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='서울상현초등학교')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -565,7 +599,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='에스알호텔 사당')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -578,7 +614,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='트루텍빌딩')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -591,7 +629,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='창업복지관')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -604,7 +644,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='KT 가좌지사')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -617,7 +659,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='스위스그랜드호텔')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -630,7 +674,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='파크빌딩')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -643,7 +689,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='내곡동주민센터')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -656,7 +704,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='서울숲더샵')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -669,7 +719,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='성동도로사업소')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -682,7 +734,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='센트럴타운 근린상가')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -695,7 +749,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='한국과학기술원')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -708,7 +764,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='아산병원신관')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -721,7 +779,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='잠실더샵스타파크')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -734,7 +794,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='KT ICC 목동센터')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -747,7 +809,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='성문교회비전센타')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -760,7 +824,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='코레일유통본사사옥')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -773,20 +839,24 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='롯지호텔')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
             texts = """<h2 style = "color: rgb(0,0, 255); font-weight: bold; font-size: 25px; text-align: left;">적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
-        st.dataframe(building)
+        st.dataframe(building))
     elif ((title == '국립중앙박물관') | ('용산구 서빙고로 137' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '국립중앙박물관')]
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='국립중앙박물관')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -799,7 +869,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='파크타워')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -812,7 +884,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='불광동 롯데캐슬아파트')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -825,7 +899,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='신사두산위브')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -838,7 +914,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='KT광화문빌딩East')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -851,7 +929,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='KT광화문빌딩West')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -864,7 +944,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='묵동자이아파트1단지')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -877,7 +959,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='홈플러스 신내점')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -890,7 +974,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='서울광장')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
@@ -903,7 +989,9 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='DDP')]
-        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+        do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
+        check = do.shape[0]
+        if (check == 1):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
