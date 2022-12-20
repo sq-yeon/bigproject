@@ -338,17 +338,17 @@ def building_searching():
     st.title('시설물 검색')
     title = st.text_input('시설물 검색','도로명 주소(시설명)을 입력하세요.')
     
-    if ((title == '코엑스') | ('강남구 영동대로 513' in title) ):
+   if ((title == '코엑스') | ('강남구 영동대로 513' in title) ):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']=='코엑스')]
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='코엑스')]
-        if (df['빗물 이용시설 설치 적합여부[0/1]']==0):
-            texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 15px; text-align: left;">부적합</h2>"""
+        if (building['빗물 이용시설 설치 적합여부[0/1]'] is False):
+            texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
-            texts = """<h2 style = "color: rgb(0,0, 255); font-weight: bold; font-size: 15px; text-align: left;">적합</h2>"""
+            texts = """<h2 style = "color: rgb(0,0, 255); font-weight: bold; font-size: 25px; text-align: left;">적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         st.dataframe(building)
     elif ((title == '서울광장') | ('중구 세종대로 110' in title) ):
