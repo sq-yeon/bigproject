@@ -344,7 +344,7 @@ def building_searching():
         st.map(df, zoom=13)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='코엑스')]
-        if (seoul_data['빗물 이용시설 설치 적합여부[0/1]']==0):
+        if (df['빗물 이용시설 설치 적합여부[0/1]']==0):
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 15px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         else:
