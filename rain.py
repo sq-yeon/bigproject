@@ -147,7 +147,7 @@ def region_searching():
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
                 st.dataframe(seoul_yc)
             else:
-                st.map(df_jrk, zoom=12)
+                st.map(df_yc, zoom=12)
                 st.dataframe(seoul_yc)
         elif loca_2 == '강남':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
