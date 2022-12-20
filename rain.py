@@ -338,7 +338,7 @@ def building_searching():
     st.title('시설물 검색')
     title = st.text_input('시설물 검색','도로명 주소(시설명)을 입력하세요.')
     
-   if ((title == '코엑스') | ('강남구 영동대로 513' in title) ):
+   if ((title == '코엑스') | ('강남구 영동대로 513' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']=='코엑스')]
         st.map(df, zoom=13)
