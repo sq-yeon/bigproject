@@ -998,6 +998,7 @@ def building_searching():
             texts = """<h2 style = "color: rgb(0,0, 255); font-weight: bold; font-size: 25px; text-align: left;">적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
         st.dataframe(building)
+    elif (title == '도로명 주소(시설명)을 입력하세요.'):
     else:
         st.header('검색 결과가 없습니다.')
         st.subheader('다른 시설물을 검색해 주세요.')  
