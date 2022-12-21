@@ -999,7 +999,7 @@ def building_searching():
             st.markdown(texts, unsafe_allow_html=True)
         st.dataframe(building)
     elif (title == ''):
-        st.header('도로명 주소(시설명)을 입력하세요.')
+        st.subheader('도로명 주소(시설명)을 입력하세요.')
     else:
         st.header('검색 결과가 없습니다.')
         st.subheader('다른 시설물을 검색해 주세요.')  
