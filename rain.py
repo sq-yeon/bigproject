@@ -336,7 +336,7 @@ def region_searching():
                 st.dataframe(seoul_ep)
 def building_searching():
     st.title('시설물 검색')
-    title = st.text_input('시설물 검색','도로명 주소(시설명)을 입력하세요.')
+    title = st.text_input('시설물 검색','')
    
     if ((title == '코엑스') | ('강남구 영동대로 513' in title)):
         st.header('검색 결과')
@@ -999,6 +999,7 @@ def building_searching():
             st.markdown(texts, unsafe_allow_html=True)
         st.dataframe(building)
     elif (title == '도로명 주소(시설명)을 입력하세요.'):
+        st.header('도로명 주소(시설명)을 입력하세요.')
     else:
         st.header('검색 결과가 없습니다.')
         st.subheader('다른 시설물을 검색해 주세요.')  
