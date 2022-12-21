@@ -1000,7 +1000,7 @@ def building_searching():
         st.dataframe(building)
     else:
         st.header('검색 결과가 없습니다.')
-        st.subheader('다른 시설물을 검색해 주세요.)  
+        st.subheader('다른 시설물을 검색해 주세요.')  
         
         
 pages_names_to_funcs = {'지역 검색🗺': region_searching, '시설물 검색🏢': building_searching}
