@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import streamlit as st
+import folium as g
 
 seoul = pd.read_csv('seoul_predict_2.csv')
 
