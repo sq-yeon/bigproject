@@ -69,7 +69,7 @@ def region_searching():
             else:
                 sd_map = g.Map(location=[37.51175556, 127.1079306], zoom_start=13)
                 for i in range(len(df_sd)):
-                    marker01 = g.Marker([df_sp.iloc[i]['lat'], df_sp.iloc[i]['lon']], tooltip=df_sp.iloc[i]['시설명']).add_to(sd_map)
+                    marker01 = g.Marker([df_sd.iloc[i]['lat'], df_sd.iloc[i]['lon']], tooltip=df_sd.iloc[i]['시설명']).add_to(sd_map)
                 folium_static(sd_map)
                 st.dataframe(seoul_sd)
         elif loca_2 == '광진':
