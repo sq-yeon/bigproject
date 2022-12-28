@@ -67,7 +67,7 @@ def region_searching():
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
                 st.dataframe(seoul_sd)
             else:
-                sd_map = g.Map(location=[37.51175556, 127.1079306], zoom_start=13)
+                sd_map = g.Map(location=[37.56061111, 127.039], zoom_start=13)
                 for i in range(len(df_sd)):
                     marker01 = g.Marker([df_sd.iloc[i]['lat'], df_sd.iloc[i]['lon']], tooltip=df_sd.iloc[i]['시설명']).add_to(sd_map)
                 folium_static(sd_map)
