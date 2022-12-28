@@ -4,7 +4,7 @@ import streamlit as st
 import folium as g
 from streamlit_folium import folium_static
 
-seoul = pd.read_csv('/seoul_predict_2.csv')
+seoul = pd.read_csv('bigproject/seoul_predict_2.csv')
 
 def region_searching():
     st.title('지역 검색')
