@@ -23,7 +23,7 @@ def region_searching():
             for i in range(len(df)):
                 marker01 = g.Marker([df.iloc[i]['lat'], df.iloc[i]['lon']], tooltip=df.iloc[i]['시설명']).add_to(s_map)
             folium_static(s_map)
-            st.dataframe(seoul_all)
+            st.table(seoul_all)
         elif loca_2 == '종로':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
