@@ -15,17 +15,18 @@ def region_searching():
                      ('전체', '강남', '강동', '강북', '강서', '관악', '광진', '구로', '금천', '노원', '도봉', '동대문', '동작', '마포', '서대문', '서초',
                      '성동', '성북', '송파', '양천', '영등포', '용산', '은평', '종로', '중구', '중랑'))
         if loca_2 == '전체':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             st.header('검색 결과')
             df = seoul.loc[(seoul['빗물 이용시설 설치 적합여부[0/1]']==1)]
+            seoul_all.sort_values([
             s_map = g.Map(location=[37.58, 127.0], zoom_start=11)
             for i in range(len(df)):
                 marker01 = g.Marker([df.iloc[i]['lat'], df.iloc[i]['lon']], tooltip=df.iloc[i]['시설명']).add_to(s_map)
             folium_static(s_map)
             st.table(seoul_all)
         elif loca_2 == '종로':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             seoul_jr = seoul_all.loc[(seoul_all['지역']=='종로구')]
             st.header('검색 결과')
@@ -41,7 +42,7 @@ def region_searching():
                 folium_static(jr_map)
                 st.table(seoul_jr)
         elif loca_2 == '송파':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             seoul_sp = seoul_all.loc[(seoul_all['지역']=='송파구')]
             st.header('검색 결과')
@@ -57,7 +58,7 @@ def region_searching():
                 folium_static(sp_map)
                 st.table(seoul_sp)
         elif loca_2 == '성동':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             seoul_sd = seoul_all.loc[(seoul_all['지역']=='성동구')]
             st.header('검색 결과')
@@ -73,7 +74,7 @@ def region_searching():
                 folium_static(sd_map)
                 st.table(seoul_sd)
         elif loca_2 == '광진':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             seoul_kj = seoul_all.loc[(seoul_all['지역']=='광진구')]
             st.header('검색 결과')
@@ -89,7 +90,7 @@ def region_searching():
                 folium_static(kj_map)
                 st.table(seoul_kj)
         elif loca_2 == '중구':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             seoul_jk = seoul_all.loc[(seoul_all['지역']=='중구')]
             st.header('검색 결과')
@@ -105,7 +106,7 @@ def region_searching():
                 folium_static(jk_map)
                 st.table(seoul_jk)
         elif loca_2 == '중랑':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             seoul_jrk = seoul_all[(seoul_all['지역']=='중랑구')]
             st.header('검색 결과')
@@ -121,7 +122,7 @@ def region_searching():
                 folium_static(jrk_map)
                 st.table(seoul_jrk)
         elif loca_2 == '성북':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             seoul_sb = seoul_all.loc[(seoul_all['지역']=='성북구')]
             st.header('검색 결과')
@@ -137,7 +138,7 @@ def region_searching():
                 folium_static(sb_map)
                 st.table(seoul_sb)
         elif loca_2 == '영등포':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             seoul_ydp = seoul_all.loc[(seoul_all['지역']=='영등포구')]
             st.header('검색 결과')
@@ -153,7 +154,7 @@ def region_searching():
                 folium_static(ydp_map)
                 st.table(seoul_ydp)
         elif loca_2 == '서초':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             seoul_sc = seoul_all.loc[(seoul_all['지역']=='서초구')]
             st.header('검색 결과')
@@ -169,7 +170,7 @@ def region_searching():
                 folium_static(sc_map)
                 st.table(seoul_sc)
         elif loca_2 == '양천':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             seoul_yc = seoul_all.loc[(seoul_all['지역']=='양천구')]
             st.header('검색 결과')
@@ -185,7 +186,7 @@ def region_searching():
                 folium_static(yc_map)
                 st.table(seoul_yc)
         elif loca_2 == '강남':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             seoul_kn = seoul_all.loc[(seoul_all['지역']=='강남구')]
             st.header('검색 결과')
@@ -201,7 +202,7 @@ def region_searching():
                 folium_static(kn_map)
                 st.table(seoul_kn)
         elif loca_2 == '강동':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             seoul_kd = seoul_all.loc[(seoul_all['지역']=='강동구')]
             st.header('검색 결과')
@@ -217,7 +218,7 @@ def region_searching():
                 folium_static(kd_map)
                 st.table(seoul_kd)
         elif loca_2 == '강북':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             seoul_kb = seoul_all.loc[(seoul_all['지역']=='강북구')]
             st.header('검색 결과')
@@ -233,7 +234,7 @@ def region_searching():
                 folium_static(kb_map)
                 st.table(seoul_kb)
         elif loca_2 == '강서':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             seoul_ks = seoul_all.loc[(seoul_all['지역']=='강서구')]
             st.header('검색 결과')
@@ -249,7 +250,7 @@ def region_searching():
                 folium_static(ks_map)
                 st.table(seoul_ks)
         elif loca_2 == '관악':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             seoul_ka = seoul_all.loc[(seoul_all['지역']=='관악구')]
             st.header('검색 결과')
@@ -265,7 +266,7 @@ def region_searching():
                 folium_static(ka_map)
                 st.table(seoul_ka)
         elif loca_2 == '구로':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             seoul_kr = seoul_all.loc[(seoul_all['지역']=='구로구')]
             st.header('검색 결과')
@@ -280,7 +281,7 @@ def region_searching():
                 folium_static(kr_map)
                 st.table(seoul_kr)
         elif loca_2 == '금천':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             seoul_kc = seoul_all.loc[(seoul_all['지역']=='금천구')]
             st.header('검색 결과')
@@ -295,7 +296,7 @@ def region_searching():
                 folium_static(kc_map)
                 st.table(seoul_kc)
         elif loca_2 == '노원':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             seoul_nw = seoul_all.loc[(seoul_all['지역']=='노원구')]
             st.header('검색 결과')
@@ -310,7 +311,7 @@ def region_searching():
                 folium_static(nw_map)
                 st.table(seoul_nw)
         elif loca_2 == '도봉':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             seoul_db = seoul_all.loc[(seoul_all['지역']=='도봉구')]
             st.header('검색 결과')
@@ -325,7 +326,7 @@ def region_searching():
                 folium_static(s_map)
                 st.table(seoul_db)
         elif loca_2 == '동대문':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             seoul_ddm = seoul_all.loc[(seoul_all['지역']=='동대문구')]
             st.header('검색 결과')
@@ -340,7 +341,7 @@ def region_searching():
                 folium_static(s_map)
                 st.table(seoul_ddm)
         elif loca_2 == '동작':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             seoul_dj = seoul_all.loc[(seoul_all['지역']=='동작구')]
             st.header('검색 결과')
@@ -355,7 +356,7 @@ def region_searching():
                 folium_static(s_map)
                 st.table(seoul_dj)
         elif loca_2 == '마포':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             seoul_mp = seoul_all.loc[(seoul_all['지역']=='마포구')]
             st.header('검색 결과')
@@ -370,7 +371,7 @@ def region_searching():
                 folium_static(s_map)
                 st.table(seoul_mp)
         elif loca_2 == '서대문':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             seoul_sdm = seoul_all.loc[(seoul_all['지역']=='서대문구')]
             st.header('검색 결과')
@@ -385,7 +386,7 @@ def region_searching():
                 folium_static(s_map)
                 st.table(seoul_sdm)
         elif loca_2 == '용산':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             seoul_ys = seoul_all.loc[(seoul_all['지역']=='용산구')]
             st.header('검색 결과')
@@ -400,7 +401,7 @@ def region_searching():
                 folium_static(s_map)
                 st.table(seoul_ys)
         elif loca_2 == '은평':
-            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
+            seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             seoul_ep = seoul_all.loc[(seoul_all['지역']=='은평구')]
             st.header('검색 결과')
