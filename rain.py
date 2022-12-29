@@ -33,13 +33,13 @@ def region_searching():
             df_jr = df_jr.loc[(df_jr['빗물 이용시설 설치 적합여부[0/1]']==1)]
             if (df_jr.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
-                st.dataframe(seoul_jr)
+                st.table(seoul_jr)
             else:
                 jr_map = g.Map(location=[37.57037778, 126.9816417], zoom_start=13)
                 for i in range(len(df_jr)):
                     marker01 = g.Marker([df_jr.iloc[i]['lat'], df_jr.iloc[i]['lon']], tooltip=df_jr.iloc[i]['시설명']).add_to(jr_map)
                 folium_static(jr_map)
-                st.dataframe(seoul_jr)
+                st.table(seoul_jr)
         elif loca_2 == '송파':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
@@ -49,13 +49,13 @@ def region_searching():
             df_sp = df_sp.loc[(df_sp['빗물 이용시설 설치 적합여부[0/1]']==1)]
             if (df_sp.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
-                st.dataframe(seoul_sp)
+                st.table(seoul_sp)
             else:
                 sp_map = g.Map(location=[37.51175556, 127.1079306], zoom_start=13)
                 for i in range(len(df_sp)):
                     marker01 = g.Marker([df_sp.iloc[i]['lat'], df_sp.iloc[i]['lon']], tooltip=df_sp.iloc[i]['시설명']).add_to(sp_map)
                 folium_static(sp_map)
-                st.dataframe(seoul_sp)
+                st.table(seoul_sp)
         elif loca_2 == '성동':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
@@ -65,13 +65,13 @@ def region_searching():
             df_sd = df_sd.loc[(df_sd['빗물 이용시설 설치 적합여부[0/1]']==1)]
             if (df_sd.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
-                st.dataframe(seoul_sd)
+                st.table(seoul_sd)
             else:
                 sd_map = g.Map(location=[37.56061111, 127.039], zoom_start=13)
                 for i in range(len(df_sd)):
                     marker01 = g.Marker([df_sd.iloc[i]['lat'], df_sd.iloc[i]['lon']], tooltip=df_sd.iloc[i]['시설명']).add_to(sd_map)
                 folium_static(sd_map)
-                st.dataframe(seoul_sd)
+                st.table(seoul_sd)
         elif loca_2 == '광진':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
@@ -81,13 +81,13 @@ def region_searching():
             df_kj = df_kj.loc[(df_kj['빗물 이용시설 설치 적합여부[0/1]']==1)]
             if (df_kj.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
-                st.dataframe(seoul_kj)
+                st.table(seoul_kj)
             else:
                 kj_map = g.Map(location=[37.53573889, 127.0845333], zoom_start=13)
                 for i in range(len(df_kj)):
                     marker01 = g.Marker([df_kj.iloc[i]['lat'], df_kj.iloc[i]['lon']], tooltip=df_kj.iloc[i]['시설명']).add_to(kj_map)
                 folium_static(kj_map)
-                st.dataframe(seoul_kj)
+                st.table(seoul_kj)
         elif loca_2 == '중구':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
@@ -97,13 +97,13 @@ def region_searching():
             df_jk = df_jk.loc[(df_jk['빗물 이용시설 설치 적합여부[0/1]']==1)]
             if (df_jk.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
-                st.dataframe(seoul_jk)
+                st.table(seoul_jk)
             else:
                 jk_map = g.Map(location=[37.56100278, 126.9996417], zoom_start=13)
                 for i in range(len(df_jk)):
                     marker01 = g.Marker([df_jk.iloc[i]['lat'], df_jk.iloc[i]['lon']], tooltip=df_jk.iloc[i]['시설명']).add_to(jk_map)
                 folium_static(jk_map)
-                st.dataframe(seoul_jk)
+                st.table(seoul_jk)
         elif loca_2 == '중랑':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
@@ -113,13 +113,13 @@ def region_searching():
             df_jrk = df_jrk.loc[(df_jrk['빗물 이용시설 설치 적합여부[0/1]']==1)]
             if (df_jrk.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
-                st.dataframe(seoul_jrk)
+                st.table(seoul_jrk)
             else:
                 jrk_map = g.Map(location=[37.60380556, 127.0947778], zoom_start=13)
                 for i in range(len(df_jrk)):
                     marker01 = g.Marker([df_jrk.iloc[i]['lat'], df_jrk.iloc[i]['lon']], tooltip=df_jrk.iloc[i]['시설명']).add_to(jrk_map)
                 folium_static(jrk_map)
-                st.dataframe(seoul_jrk)
+                st.table(seoul_jrk)
         elif loca_2 == '성북':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
@@ -129,13 +129,13 @@ def region_searching():
             df_sb = df_sb.loc[(df_sb['빗물 이용시설 설치 적합여부[0/1]']==1)]
             if (df_sb.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
-                st.dataframe(seoul_sb)
+                st.table(seoul_sb)
             else:
                 sb_map = g.Map(location=[37.58638333, 127.0203333], zoom_start=13)
                 for i in range(len(df_sb)):
                     marker01 = g.Marker([df_sb.iloc[i]['lat'], df_sb.iloc[i]['lon']], tooltip=df_sb.iloc[i]['시설명']).add_to(sb_map)
                 folium_static(sb_map)
-                st.dataframe(seoul_sb)
+                st.table(seoul_sb)
         elif loca_2 == '영등포':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
@@ -145,13 +145,13 @@ def region_searching():
             df_ydp = df_ydp.loc[(df_ydp['빗물 이용시설 설치 적합여부[0/1]']==1)]
             if (df_ydp.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
-                st.dataframe(seoul_ydp)
+                st.table(seoul_ydp)
             else:
                 ydp_map = g.Map(location=[37.52361111, 126.8983417], zoom_start=13)
                 for i in range(len(df_ydp)):
                     marker01 = g.Marker([df_ydp.iloc[i]['lat'], df_ydp.iloc[i]['lon']], tooltip=df_ydp.iloc[i]['시설명']).add_to(ydp_map)
                 folium_static(ydp_map)
-                st.dataframe(seoul_ydp)
+                st.table(seoul_ydp)
         elif loca_2 == '서초':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
@@ -161,13 +161,13 @@ def region_searching():
             df_sc = df_sc.loc[(df_sc['빗물 이용시설 설치 적합여부[0/1]']==1)]
             if (df_sc.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
-                st.dataframe(seoul_sc)
+                st.table(seoul_sc)
             else:
                 sc_map = g.Map(location=[37.48078611, 127.0348111], zoom_start=13)
                 for i in range(len(df_sc)):
                     marker01 = g.Marker([df_sc.iloc[i]['lat'], df_sc.iloc[i]['lon']], tooltip=df_sc.iloc[i]['시설명']).add_to(sc_map)
                 folium_static(sc_map)
-                st.dataframe(seoul_sc)
+                st.table(seoul_sc)
         elif loca_2 == '양천':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
@@ -177,13 +177,13 @@ def region_searching():
             df_yc = df_yc.loc[(df_yc['빗물 이용시설 설치 적합여부[0/1]']==1)]
             if (df_yc.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
-                st.dataframe(seoul_yc)
+                st.table(seoul_yc)
             else:
                 yc_map = g.Map(location=[37.51423056, 126.8687083], zoom_start=13)
                 for i in range(len(df_yc)):
                     marker01 = g.Marker([df_yc.iloc[i]['lat'], df_yc.iloc[i]['lon']], tooltip=df_yc.iloc[i]['시설명']).add_to(yc_map)
                 folium_static(yc_map)
-                st.dataframe(seoul_yc)
+                st.table(seoul_yc)
         elif loca_2 == '강남':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
@@ -193,13 +193,13 @@ def region_searching():
             df_kn = df_kn.loc[(df_kn['빗물 이용시설 설치 적합여부[0/1]']==1)]
             if (df_kn.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
-                st.dataframe(seoul_kn)
+                st.table(seoul_kn)
             else:
                 kn_map = g.Map(location=[37.514575, 127.0495556], zoom_start=13)
                 for i in range(len(df_kn)):
                     marker01 = g.Marker([df_kn.iloc[i]['lat'], df_kn.iloc[i]['lon']], tooltip=df_kn.iloc[i]['시설명']).add_to(kn_map)
                 folium_static(kn_map)
-                st.dataframe(seoul_kn)
+                st.table(seoul_kn)
         elif loca_2 == '강동':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
@@ -209,13 +209,13 @@ def region_searching():
             df_kd = df_kd.loc[(df_kd['빗물 이용시설 설치 적합여부[0/1]']==1)]
             if (df_kd.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
-                st.dataframe(seoul_kd)
+                st.table(seoul_kd)
             else:
                 kd_map = g.Map(location=[37.52736667, 127.1258639], zoom_start=13)
                 for i in range(len(df_kd)):
                     marker01 = g.Marker([df_kd.iloc[i]['lat'], df_kd.iloc[i]['lon']], tooltip=df_kd.iloc[i]['시설명']).add_to(kd_map)
                 folium_static(kd_map)
-                st.dataframe(seoul_kd)
+                st.table(seoul_kd)
         elif loca_2 == '강북':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
@@ -225,13 +225,13 @@ def region_searching():
             df_kb = df_kb.loc[(df_kb['빗물 이용시설 설치 적합여부[0/1]']==1)]
             if (df_kb.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
-                st.dataframe(seoul_kb)
+                st.table(seoul_kb)
             else:
                 kb_map = g.Map(location=[37.63695556, 127.0277194], zoom_start=13)
                 for i in range(len(df_kb)):
                     marker01 = g.Marker([df_kb.iloc[i]['lat'], df_kb.iloc[i]['lon']], tooltip=df_kb.iloc[i]['시설명']).add_to(kb_map)
                 folium_static(kb_map)
-                st.dataframe(seoul_kb)
+                st.table(seoul_kb)
         elif loca_2 == '강서':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
@@ -241,13 +241,13 @@ def region_searching():
             df_ks = df_ks.loc[(df_ks['빗물 이용시설 설치 적합여부[0/1]']==1)]
             if (df_ks.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
-                st.dataframe(seoul_ks)
+                st.table(seoul_ks)
             else:
                 ks_map = g.Map(location=[37.54815556, 126.851675], zoom_start=13)
                 for i in range(len(df_ks)):
                     marker01 = g.Marker([df_ks.iloc[i]['lat'], df_ks.iloc[i]['lon']], tooltip=df_ks.iloc[i]['시설명']).add_to(ks_map)
                 folium_static(ks_map)
-                st.dataframe(seoul_ks)
+                st.table(seoul_ks)
         elif loca_2 == '관악':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
@@ -257,13 +257,13 @@ def region_searching():
             df_ka = df_ka.loc[(df_ka['빗물 이용시설 설치 적합여부[0/1]']==1)]
             if (df_ka.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
-                st.dataframe(seoul_ka)
+                st.table(seoul_ka)
             else:
                 ka_map = g.Map(location=[37.47538611, 126.9538444], zoom_start=13)
                 for i in range(len(df_ka)):
                     marker01 = g.Marker([df_ka.iloc[i]['lat'], df_ka.iloc[i]['lon']], tooltip=df_ka.iloc[i]['시설명']).add_to(ka_map)
                 folium_static(ka_map)
-                st.dataframe(seoul_ka)
+                st.table(seoul_ka)
         elif loca_2 == '구로':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
@@ -272,13 +272,13 @@ def region_searching():
             df_kr = seoul.loc[(seoul['지역']=='구로구')]
             if (df_kr.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
-                st.dataframe(seoul_kr)
+                st.table(seoul_kr)
             else:
                 kr_map = g.Map(location=[37.49265, 126.8895972], zoom_start=13)
                 for i in range(len(df_kr)):
                     marker01 = g.Marker([df_kr.iloc[i]['lat'], df_kr.iloc[i]['lon']], tooltip=df_kr.iloc[i]['시설명']).add_to(kr_map)
                 folium_static(kr_map)
-                st.dataframe(seoul_kr)
+                st.table(seoul_kr)
         elif loca_2 == '금천':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
@@ -287,13 +287,13 @@ def region_searching():
             df_kc = seoul.loc[(seoul['지역']=='금천구')]
             if (df_kc.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
-                st.dataframe(seoul_kc)
+                st.table(seoul_kc)
             else:
                 kc_map = g.Map(location=[37.44910833, 126.9041972], zoom_start=13)
                 for i in range(len(df_kc)):
                     marker01 = g.Marker([df_kc.iloc[i]['lat'], df_kc.iloc[i]['lon']], tooltip=df_kc.iloc[i]['시설명']).add_to(kc_map)
                 folium_static(kc_map)
-                st.dataframe(seoul_kc)
+                st.table(seoul_kc)
         elif loca_2 == '노원':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
@@ -302,13 +302,13 @@ def region_searching():
             df_nw = seoul.loc[(seoul['지역']=='노원구')]
             if (df_nw.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
-                st.dataframe(seoul_nw)
+                st.table(seoul_nw)
             else:
                 nw_map = g.Map(location=[37.65146111, 127.0583889], zoom_start=13)
                 for i in range(len(df_nw)):
                     marker01 = g.Marker([df_nw.iloc[i]['lat'], df_nw.iloc[i]['lon']], tooltip=df_nw.iloc[i]['시설명']).add_to(nw_map)
                 folium_static(nw_map)
-                st.dataframe(seoul_nw)
+                st.table(seoul_nw)
         elif loca_2 == '도봉':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
@@ -317,13 +317,13 @@ def region_searching():
             df_db = seoul.loc[(seoul['지역']=='도봉구')]
             if (df_db.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
-                st.dataframe(seoul_db)
+                st.table(seoul_db)
             else:
                 s_map = g.Map(location=[37.66583333, 127.0495222], zoom_start=13)
                 for i in range(len(df_db)):
                     marker01 = g.Marker([df_db.iloc[i]['lat'], df_db.iloc[i]['lon']], tooltip=df_db.iloc[i]['시설명']).add_to(s_map)
                 folium_static(s_map)
-                st.dataframe(seoul_db)
+                st.table(seoul_db)
         elif loca_2 == '동대문':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
@@ -332,13 +332,13 @@ def region_searching():
             df_ddm = seoul.loc[(seoul['지역']=='동대문구')]
             if (df_ddm.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
-                st.dataframe(seoul_ddm)
+                st.table(seoul_ddm)
             else:
                 s_map = g.Map(location=[37.571625, 127.0421417], zoom_start=13)
                 for i in range(len(df_ddm)):
                     marker01 = g.Marker([df_ddm.iloc[i]['lat'], df_ddm.iloc[i]['lon']], tooltip=df_ddm.iloc[i]['시설명']).add_to(s_map)
                 folium_static(s_map)
-                st.dataframe(seoul_ddm)
+                st.table(seoul_ddm)
         elif loca_2 == '동작':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
@@ -347,13 +347,13 @@ def region_searching():
             df_dj = seoul.loc[(seoul['지역']=='동작구')]
             if (df_dj.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
-                st.dataframe(seoul_dj)
+                st.table(seoul_dj)
             else:
                 s_map = g.Map(location=[37.50965556, 126.941575], zoom_start=13)
                 for i in range(len(df_dj)):
                     marker01 = g.Marker([df_dj.iloc[i]['lat'], df_dj.iloc[i]['lon']], tooltip=df_dj.iloc[i]['시설명']).add_to(s_map)
                 folium_static(s_map)
-                st.dataframe(seoul_dj)
+                st.table(seoul_dj)
         elif loca_2 == '마포':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
@@ -362,13 +362,13 @@ def region_searching():
             df_mp = seoul.loc[(seoul['지역']=='마포구')]
             if (df_mp.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
-                st.dataframe(seoul_mp)
+                st.table(seoul_mp)
             else:
                 s_map = g.Map(location=[37.56070556, 126.9105306], zoom_start=13)
                 for i in range(len(df_mp)):
                     marker01 = g.Marker([df_mp.iloc[i]['lat'], df_mp.iloc[i]['lon']], tooltip=df_mp.iloc[i]['시설명']).add_to(s_map)
                 folium_static(s_map)
-                st.dataframe(seoul_mp)
+                st.table(seoul_mp)
         elif loca_2 == '서대문':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
@@ -377,13 +377,13 @@ def region_searching():
             df_sdm = seoul.loc[(seoul['지역']=='서대문구')]
             if (df_sdm.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
-                st.dataframe(seoul_sdm)
+                st.table(seoul_sdm)
             else:
                 s_map = g.Map(location=[37.57636667, 126.9388972], zoom_start=13)
                 for i in range(len(df_sdm)):
                     marker01 = g.Marker([df_sdm.iloc[i]['lat'], df_sdm.iloc[i]['lon']], tooltip=df_sdm.iloc[i]['시설명']).add_to(s_map)
                 folium_static(s_map)
-                st.dataframe(seoul_sdm)
+                st.table(seoul_sdm)
         elif loca_2 == '용산':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
@@ -392,13 +392,13 @@ def region_searching():
             df_ys = seoul.loc[(seoul['지역']=='용산구')]
             if (df_ys.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
-                st.dataframe(seoul_ys)
+                st.table(seoul_ys)
             else:
                 s_map = g.Map(location=[37.53609444, 126.9675222], zoom_start=13)
                 for i in range(len(df_ys)):
                     marker01 = g.Marker([df_ys.iloc[i]['lat'], df_ys.iloc[i]['lon']], tooltip=df_ys.iloc[i]['시설명']).add_to(s_map)
                 folium_static(s_map)
-                st.dataframe(seoul_ys)
+                st.table(seoul_ys)
         elif loca_2 == '은평':
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물목표량대비사용량'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
@@ -407,13 +407,13 @@ def region_searching():
             df_ep = seoul.loc[(seoul['지역']=='은평구')]
             if (df_ep.shape[0]==0):
                 st.subheader('해당 지역에 적합한 건물이 없습니다.')
-                st.dataframe(seoul_ep)
+                st.table(seoul_ep)
             else:
                 s_map = g.Map(location=[37.59996944, 126.9312417], zoom_start=13)
                 for i in range(len(df_ep)):
                     marker01 = g.Marker([df_ep.iloc[i]['lat'], df_ep.iloc[i]['lon']], tooltip=df_ep.iloc[i]['시설명']).add_to(s_map)
                 folium_static(s_map)
-                st.dataframe(seoul_ep)
+                st.table(seoul_ep)
 
 def building_searching():
     st.title('시설물 검색')
