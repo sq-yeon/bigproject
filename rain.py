@@ -18,8 +18,7 @@ def region_searching():
             seoul_all = seoul.sort_values(by=['빗물 이용시설 설치 적합여부[0/1]', '빗물 이용 예측량(mm/1년)'], ascending=[False, False])
             seoul_all = seoul_all[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
             st.header('검색 결과')
-            df = seoul.loc[(seoul['빗물 이용시설 설치 적합여부[0/1]']==1)]
-            seoul_all.sort_values([
+            df = seoul.loc[(seoul['빗물 이용시설 설치 적합여부[0/1]']==1)
             s_map = g.Map(location=[37.58, 127.0], zoom_start=11)
             for i in range(len(df)):
                 marker01 = g.Marker([df.iloc[i]['lat'], df.iloc[i]['lon']], tooltip=df.iloc[i]['시설명']).add_to(s_map)
