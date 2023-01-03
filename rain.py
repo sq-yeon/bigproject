@@ -1245,7 +1245,7 @@ def building_searching():
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
         check = do.shape[0]
         if (check == 1):
-            marker01 = g.Marker([df['lat'], df['lon']], tooltip=title, icon=g.Icon(color='red')).add_to(s_map)
+            marker01 = g.Marker([df['lat'], df['lon']], tooltip='DDP, icon=g.Icon(color='red')).add_to(s_map)
             folium_static(s_map)
             texts = """<h2 style = "color: rgb(255,0,0); font-weight: bold; font-size: 25px; text-align: left;">부적합</h2>"""
             st.markdown(texts, unsafe_allow_html=True)
