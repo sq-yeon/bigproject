@@ -422,7 +422,7 @@ def building_searching():
     if ((title == '코엑스') | ('강남구 영동대로 513' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']=='코엑스')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='코엑스')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -441,7 +441,7 @@ def building_searching():
     elif ((title == '현대백화점 무역센터점') | ('강남구 테헤란로 517' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']=='현대백화점 무역센터점')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='현대백화점 무역센터점')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -460,7 +460,7 @@ def building_searching():
     elif ((title == '미아동복합청사') | ('강북구 솔매로49길14' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']=='미아동복합청사')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='미아동복합청사')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -479,7 +479,7 @@ def building_searching():
     elif ((title == '장원빌딩') | ('강북구 도봉로 323' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']=='장원빌딩')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='장원빌딩')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -498,7 +498,7 @@ def building_searching():
     elif ((title == '엘디타운') | ('관악구 청룡1길 27' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']=='엘디타운')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='엘디타운')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -517,7 +517,7 @@ def building_searching():
     elif ((title == '서울대역 해담채') | ('관악구 관악로15길 23-12' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']=='서울대역 해담채')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='서울대역 해담채')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -536,7 +536,7 @@ def building_searching():
     elif ((title == '건국대학교 부동산학관') | ('광진구 능동로120 부동산학관' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']=='건국대학교 부동산학관')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='건국대학교 부동산학관')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -555,7 +555,7 @@ def building_searching():
     elif ((title == '건국대학교 신공학관') | ('광진구 능동로120 신공학관' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']=='건국대학교 신공학관')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='건국대학교 신공학관')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -574,7 +574,7 @@ def building_searching():
     elif ((title == '구로아트밸리') | ('구로구 가마산로25길 9-24' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']=='구로아트밸리')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='구로아트밸리')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -593,7 +593,7 @@ def building_searching():
     elif ((title == '벽산디지털밸리7차') | ('구로구 디지털로33길 50' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']=='벽산디지털밸리7차')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='벽산디지털밸리7차')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -612,7 +612,7 @@ def building_searching():
     elif ((title == '사라유치원') | ('노원구 동일로198가길 13' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']=='사라유치원')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='사라유치원')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -631,7 +631,7 @@ def building_searching():
     elif ((title == '성실유치원') | ('노원구 한글비석로1길 28' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']=='성실유치원')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='성실유치원')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -650,7 +650,7 @@ def building_searching():
     elif ((title == '서울신화초등학교') | ('도봉구 우이천로 120' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']=='서울신화초등학교')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='서울신화초등학교')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -669,7 +669,7 @@ def building_searching():
     elif ((title == '도봉기적의도서관') | ('도봉구 마들로 797' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']=='도봉기적의도서관')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='도봉기적의도서관')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -688,7 +688,7 @@ def building_searching():
     elif ((title == '청계한신휴플러스') | ('동대문구 서울시립대로 14' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']=='청계한신휴플러스')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='청계한신휴플러스')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -707,7 +707,7 @@ def building_searching():
     elif ((title == '대성스카이렉스 Ⅱ') | ('동대문구 청계천로 471' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '대성스카이렉스 Ⅱ')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='대성스카이렉스 Ⅱ')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -726,7 +726,7 @@ def building_searching():
     elif ((title == '서울상현초등학교') | ('동작구 상도로58길 21' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '서울상현초등학교')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='서울상현초등학교')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -745,7 +745,7 @@ def building_searching():
     elif ((title == '에스알호텔 사당') | ('동작구 동작대로1길 15' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '에스알호텔 사당')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='에스알호텔 사당')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -764,7 +764,7 @@ def building_searching():
     elif ((title == '트루텍빌딩') | ('마포구 월드컵북로 56길 12' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '트루텍빌딩')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='트루텍빌딩')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -783,7 +783,7 @@ def building_searching():
     elif ((title == '창업복지관') | ('마포구 매봉산로 18' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '창업복지관')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='창업복지관')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -802,7 +802,7 @@ def building_searching():
     elif ((title == 'KT 가좌지사') | ('서대문구 응암로 121' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== 'KT 가좌지사')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='KT 가좌지사')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -821,7 +821,7 @@ def building_searching():
     elif ((title == '스위스그랜드호텔') | ('서대문구 연희로 353' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '스위스그랜드호텔')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='스위스그랜드호텔')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -840,7 +840,7 @@ def building_searching():
     elif ((title == '파크빌딩') | ('서초구 반포대로27길 16' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '파크빌딩')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='파크빌딩')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -859,7 +859,7 @@ def building_searching():
     elif ((title == '내곡동주민센터') | ('서초구 염곡말길 9' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '내곡동주민센터')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='내곡동주민센터')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -878,7 +878,7 @@ def building_searching():
     elif ((title == '서울숲더샵') | ('성동구 왕십리로 241' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '서울숲더샵')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='서울숲더샵')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -897,7 +897,7 @@ def building_searching():
     elif ((title == '성동도로사업소') | ('성동구 자동차시장길 41' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '성동도로사업소')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='성동도로사업소')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -916,7 +916,7 @@ def building_searching():
     elif ((title == '센트럴타운 근린상가') | ('성북구 월계로40길 7' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '센트럴타운 근린상가')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='센트럴타운 근린상가')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -935,7 +935,7 @@ def building_searching():
     elif ((title == '한국과학기술원') | ('성북구 월곡2동 화랑로14길 5' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '한국과학기술원')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='한국과학기술원')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -954,7 +954,7 @@ def building_searching():
     elif ((title == '아산병원신관') | ('송파구 올림픽로43길 88' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '아산병원신관')]
-        st.map(df, zoom=13)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='아산병원신관')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -973,7 +973,7 @@ def building_searching():
     elif ((title == '잠실더샵스타파크') | ('송파구 올림픽로35가길 10' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '잠실더샵스타파크')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='잠실더샵스타파크')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -992,7 +992,7 @@ def building_searching():
     elif ((title == 'KT ICC 목동센터') | ('양천구 목동동로 233-5' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== 'KT ICC 목동센터')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='KT ICC 목동센터')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -1011,7 +1011,7 @@ def building_searching():
     elif ((title == '성문교회비전센타') | ('양천구 목동중앙북로24길 15' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '성문교회비전센타')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='성문교회비전센타')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -1030,7 +1030,7 @@ def building_searching():
     elif ((title == '코레일유통본사사옥') | ('영등포구 국회대로 612' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '코레일유통본사사옥')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='코레일유통본사사옥')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -1049,7 +1049,7 @@ def building_searching():
     elif ((title == '롯지호텔') | ('영등포구 영등포로 264-11' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '롯지호텔')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='롯지호텔')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -1068,7 +1068,7 @@ def building_searching():
     elif ((title == '국립중앙박물관') | ('용산구 서빙고로 137' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '국립중앙박물관')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='국립중앙박물관')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -1087,7 +1087,7 @@ def building_searching():
     elif ((title == '파크타워') | ('용산구 서빙고로 67' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '파크타워')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='파크타워')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -1106,7 +1106,7 @@ def building_searching():
     elif ((title == '불광동 롯데캐슬아파트') | ('은평구 불광로 64' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '불광동 롯데캐슬아파트')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='불광동 롯데캐슬아파트')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -1125,7 +1125,7 @@ def building_searching():
     elif ((title == '신사두산위브') | ('은평구 갈현로1길 36' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '신사두산위브')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='신사두산위브')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -1182,7 +1182,7 @@ def building_searching():
     elif ((title == '묵동자이아파트1단지') | ('중랑구 숙선옹주로 6-9' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '묵동자이아파트1단지')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='묵동자이아파트1단지')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -1201,7 +1201,7 @@ def building_searching():
     elif ((title == '홈플러스 신내점') | ('중랑구 신내로 201' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '홈플러스 신내점')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='홈플러스 신내점')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -1220,7 +1220,7 @@ def building_searching():
     elif ((title == '서울광장') | ('중구 세종대로 110' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== '서울광장')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='서울광장')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
@@ -1239,7 +1239,7 @@ def building_searching():
     elif ((title == 'DDP') | ('중구 을지로7가 을지로 281' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== 'DDP')]
-        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=15)
+        s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='DDP')]
         do = building.loc[(building['빗물 이용시설 설치 적합여부[0/1]']==0)]
