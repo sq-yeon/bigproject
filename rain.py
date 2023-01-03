@@ -1239,7 +1239,7 @@ def building_searching():
     elif ((title == 'DDP') | ('중구 을지로7가 을지로 281' in title)):
         st.header('검색 결과')
         df = seoul.loc[(seoul['시설명']== 'DDP')]
-        s_building = df['시설명']
+        s_building = df.iloc[0]['시설명']
         s_map = g.Map(location=[df['lat'], df['lon']], zoom_start=17)
         seoul_data = seoul[['지역', '시설명', '빗물 이용 예측량(mm/1년)', '빗물 이용시설 설치 적합여부[0/1]']]
         building = seoul_data.loc[(seoul_data['시설명']=='DDP')]
