@@ -1261,7 +1261,7 @@ def building_searching():
         st.header('검색 결과가 없습니다.')
         st.subheader('다른 시설물을 검색해 주세요.')
         
-pages_names_to_funcs = {'지역 검색🗺': region_searching, '시설물 검색🏢': building_searching}
+pages_names_to_funcs = {'시설물 검색🏢': building_searching, '지역 검색🗺': region_searching}
 
 selected_page = st.sidebar.selectbox('검색 방법을 골라주세요.', pages_names_to_funcs.keys())
 
